@@ -23,7 +23,7 @@ Linked list nodes stores the edges
 
 
 
-I'll add examples of how to access each attributes and methods later
+To Be Continued, I'll add examples of how to access each attributes and methods later
 ====================================================================
 
 
