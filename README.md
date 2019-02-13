@@ -6,9 +6,9 @@ Nodes
 
 Each node has 3 different attributes: .data, .id, .edges
 
-.data stores the information about the node (i.e concepts, subjects)
-.id stores an id number correponding to the index of the NodeArray where the node is stored
-.edge stores a doubly linked list with all its edges
+1. data stores the information about the node (i.e concepts, subjects)
+2. id stores an id number correponding to the index of the NodeArray where the node is stored
+3. edge stores a doubly linked list with all its edges
 
 
 NodeArray
