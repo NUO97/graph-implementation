@@ -8,7 +8,7 @@ from graph import AGraph
 #
 # print(G.size)
 
-#
-# G = AGraph.generate_random(10, 0.3)
-#
-# print(G.size)
+
+G = AGraph.generate_random(10, 0.3)
+
+print(G.nodes[1].data)
