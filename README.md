@@ -10,6 +10,17 @@ Each node has 3 different attributes: .data, .id, .edges
 2. id stores an id number correponding to the index of the NodeArray where the node is stored
 3. edge stores a doubly linked list with all its edges
 
+```python
+>>> n = Node("math")
+
+>>> n.data
+>>> 'math'
+
+>>> n.id
+
+>>> n.edges
+>>> <__main__.LinkedList at 0x8b92e4c>
+```
 
 NodeArray
 =========
@@ -65,7 +76,12 @@ Generate a Random Graph
 =======================
 
 
+Traverse the graph
+==================
 
+
+Neighbors Traversal
+===================
 
 
 
