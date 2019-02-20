@@ -44,6 +44,28 @@ Graph is constructed with all the above data structures and provides the followi
 1. size stores the size of the graph  
 2. node_dict contains a dictionary of node id and data
 3. create_node method increments the graph size by 1 and adds the node to the nodearray  
-4. create_edge method creates an edge object and adds each other to the edge attribute of each node  
+4. create_edge method creates an edge object and adds each other to the edge attribute of each node    
+5. adjacent_nodes method returns boolean value and determines if two nodes are adjacent  
+6. search_edge method find and returns a reference to an edge object  
+7. destroy_node removes the node from the nodearray  
+8. destroy_edge removes the edge object 
+9. is_connected returns a boolean value that determines if the graph is connected  
+10. traversal method visits all nodes and edges  
+11. breadth_search method uses BFS to traverse through the entire graph  
+12. neighbors_traversal finds all neighbors of a node to a certain degree of separation  
+13. generate_random method creates a random graph with a certain number of nodes and a probability that the nodes are connected  
+
+
+Create and Destroy Nodes
+========================
+
+
+
+Generate a Random Graph 
+=======================
+
+
+
+
 
 
