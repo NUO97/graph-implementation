@@ -19,14 +19,37 @@ Each node has 3 different attributes: .data, .id, .edges
 >>> n.id
 
 >>> n.edges
->>> <__main__.LinkedList at 0x8b92e4c>
+>>> <__main__.LinkedList at 0x9a72e4k>
 ```
 
 NodeArray
 =========
 
-NodeArray assigns ID to each nodes using the array index, when array is full, a new array twice the size of the original one is created and copies the content of the original array into the new array.
+NodeArray assigns ID to each nodes using the array index, when array is full, a new array twice the size of the original one is created and copies the content of the original array into the new array.  
 
+```python
+>>> arr = NodeArray(size=1)
+
+>>> a.add_node('math')
+
+>>> a[0].data
+>>> 'math'
+
+>>> a[0].id
+>>> 0
+
+>>> a.add_node('physics')
+Array Resized
+
+>>> a.size
+>>> 2
+
+>>> a[1].data
+>>> 'physics'
+
+>>> a[1].id
+>>> 1
+```
 Linked List Nodes
 =================
 
@@ -38,6 +61,20 @@ The graph's nodes are connected by edges. An edge is created by adding a linked 
 4. .edge_reference points to an edge object   
 
 
+```python
+>>> l = LinkedListNode("2019",edge_reference="SomeEdge")
+
+>>> l.data
+>>> '2019'
+
+>>> l.prev
+
+>>> l.next
+
+>>> l.edge_reference
+>>> 'SomeEdge'
+```
+
 Edges
 =====
 
@@ -45,8 +82,18 @@ Each edge object has three attributes: .data, .source, .target
 
 1. .data stores anydata contained in the edge (assigned upon instantiation)  
 2. .source is a reference to linked list nodes in the edge list (from)  
-3. .target is a reference to linked list nodes in the edge list (to)
+3. .target is a reference to linked list nodes in the edge list (to)  
 
+```python
+>>> e = Edge("Question: What's the meaning of area under the curve? Answer: Integral")
+
+>>> e.data
+>>> 'Question: What's the meaning of area under the curve? Answer: Integral'
+
+>>> e.source
+
+>>> e.target
+```
 Graph
 =====
 
@@ -67,21 +114,78 @@ Graph is constructed with all the above data structures and provides the followi
 13. generate_random method creates a random graph with a certain number of nodes and a probability that the nodes are connected  
 
 
-Create and Destroy Nodes
-========================
+### Create and Destroy Nodes
+
+```python
+
+>>> G = AGraph()
+
+>>> G.create_node("math")
+
+>>> G.nodes[0].data
+>>> 'math'
+
+>>> G.nodes[0].id
+>>> 0
+
+>>> G.create_node("physics")
+
+>>> G.nodes[1].data
+>>> 'physics'
+
+>>> G.nodes[1].id
+>>> 1
+
+>>> G.size
+>>> 2
+
+>>> G.node_dict
+>>> {0: 'math', 1: 'physics'}
+
+>>> G.create_edge("Question: xxx. Answer: xxx",0,1)
+
+>>> G.adjacent(0,1)
+>>> True
+
+>>> G.nodes[0].neighbors
+>>> set([1])
+
+>>> G.nodes[1].neighbors
+>>> set([0])
+
+>>> G.destroy_node(0)
+
+>>> G.nodes[1].neighbors
+>>> set([])
+```
+
+### Generate a Random Graph 
+
+```python
+
+>>> G = AGraph.generate_random(10, 0.4)
+
+>>> G.nodes[0].neighbors
+>>> set([9, 5, 2, 3])
+
+>>> G.nodes[8].neighbors
+>>> set([7, 3, 0, 5])
+
+>>> G.destroy_node(0)
+
+>>> G.nodes[8].neighbors
+>>> set([7, 3, 5])
+
+>>> G.nodes[1].neighbors
+>>> set([2, 3, 4, 5])
+```
+
+### Traverse the graph
 
 
 
-Generate a Random Graph 
-=======================
+### Neighbors Traversal
 
-
-Traverse the graph
-==================
-
-
-Neighbors Traversal
-===================
 
 
 
